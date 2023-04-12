@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <div style="text-align: center">
+    <h1 style="text-align: center">Etch-a-Sketch</h1>
+    <button id="btn" style="text-align: center">Reset Sketchpad</button>
+  </div>
+  <br>
+  <div id="container">
+  </div>
+
+  <script>
+    function drawGrid(n) {
+      for (var i = 0; i < n; i++) {
+        for (var j = 0; j < n; j++) {
+          const grid = document.createElement("div");
+          grid.classList.add("grid");
+          container.appendChild(grid);
+          grid.style.setProperty("background-color", "blue");
+          grid.style.setProperty("width", "480/n px");
+          grid.style.setProperty("height", "480/n px");
+          grid.style.setProperty("border-style", "solid");
+          grid.style.setProperty("border-width", "0px");
+          grid.addEventListener("mouseenter", function (e) {
+            e.target.style.background = "black";
+          });
+        }
+      }
+    }
+
+    var btn = document.querySelector('#btn');
+
+    btn.addEventListener('click', function (e) {
+      var n = prompt("How many grids per side woud you prefer?");
+      const container = document.querySelector("#container");
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+      //repeat(number of columns/rows, the column width we want);
+      //1fr is 1 fraction of the free space, in this case each fraction is equal to container width / n 
+      container.style.gridTemplateColumns = "repeat(" + n + ", 1fr)";
+      drawGrid(n);
+    });
+
+    var n = 16;
+    const container = document.querySelector("#container");
+    container.setAttribute("style", "display: grid; grid-template-columns: repeat(" + n + ", 1fr); height: 720px; width: 720px; margin: auto; padding-top: 30px");
+    //  container.setAttribute("style", "padding-top: 300px");
+    drawGrid(n);
+  </script>
+</body>
+
+</html>
