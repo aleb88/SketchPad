@@ -5,3 +5,4 @@ The user can also create new grid of the same size while being able to specify h
 randomly generated maze uses the binary tree maze generation method.
 
 ![alt text](https://raw.githubusercontent.com/aleb88/SketchPad/main/preview.png)
+![alt text](https://raw.githubusercontent.com/aleb88/SketchPad/main/preview2.png)
