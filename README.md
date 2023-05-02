@@ -6,3 +6,4 @@ randomly generated maze uses the binary tree maze generation method.
 
 ![alt text](https://raw.githubusercontent.com/aleb88/SketchPad/main/preview.png)
 ![alt text](https://raw.githubusercontent.com/aleb88/SketchPad/main/preview2.png)
+![alt text](https://raw.githubusercontent.com/aleb88/SketchPad/main/preview3.png)
