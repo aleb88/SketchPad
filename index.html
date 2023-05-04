@@ -25,6 +25,13 @@
     }
 
     function drawGrid(n, color) {
+      var n;
+      while (true) {
+        n = prompt("Please select a number between 8 and 300");
+        if (n === null) {
+          return; //break out of the function early
+        }
+      }
       for (var i = 0; i < n; i++) {
         for (var j = 0; j < n; j++) {
           const grid = document.createElement("div");
