@@ -140,10 +140,17 @@
 
     var btn = document.querySelector('#btn');
     btn.addEventListener('click', function (e) {
-      var n = prompt("How many grids per side woud you prefer?");
-      if (n === null) {
-        return; //break out of the function early
+      var n;
+      while (true) {
+        n = prompt("Select the number of grids per side (must be in range between 8 and 300)");
+        if (n === null) {
+          return; //break out of the function early
+        }
+        if (n > 7 && n < 301) {
+          break;
+        }
       }
+      
       const container = document.querySelector("#container");
       clearGrid();
       //repeat(number of columns/rows, the column width we want);
